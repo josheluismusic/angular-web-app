@@ -1,0 +1,10 @@
+<h3>{{ legend }} - {{ percentage }}</h3>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-primary" type="button" id="button-addon1"><i class="mdi mdi-minus" (click)="setPercentage(-5)"></i></button>
+  </div>
+  <input #inputpercentage type="number" class="form-control" name="percentage" (ngModelChange)="onPercentageChange($event)"  [(ngModel)]="percentage" min="0" max="100">
+  <div class="input-group-append">
+      <button class="btn btn-primary" type="button" id="button-addon1"><i class="mdi mdi-plus"(click)="setPercentage(5)"></i></button>
+  </div>
+</div>
